@@ -22,19 +22,18 @@ if [ $? -ne 0 ]; then
 fi
 
 # install wget if not installed
-if ! [ `command -v wget` ]; then
+! [ `command -v wget` ] && \
     apt install wget -y
-fi
+
 
 # install alien if not installed
-if ! [ `command -v alien` ]; then
+! [ `command -v alien` ] && \
     apt install alien -y
-fi 
+ 
 
 # remove zenmap if already installed ( just in case to avoid any extra errors )
-if [ `command -v zenmap` ]; then
+[ `command -v zenmap` ] &&  \
     apt remove zenmap -y
-fi
 
 # exit on any error
 set -e
@@ -63,7 +62,6 @@ rm -v python-gtk2_2.24.0-5.1ubuntu2_amd64.deb
 rm -v zenmap_7.92-2_all.deb
 rm -v zenmap-7.92-1.noarch.rpm
 
-if [ `command -v zenmap` ]; then echo -e "\n\e[32mDone!\e[0m\nNow try running zenmap by typing: sudo zenmap"
-fi
+[ `command -v zenmap` ] && echo -e "\n\e[32mDone! \e[0m\nNow try running zenmap by typing: sudo zenmap"
 
 exit 0
