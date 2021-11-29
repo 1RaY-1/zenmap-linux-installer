@@ -2,22 +2,18 @@
 
 # Simple bash script to install zenmap on Debian based Linux distros
 
+# exit on any error
+set -e
+
 # check if debian based linux distro
 if ! [ `command -v apt` ]; then 
-    echo This script is for Debian based Linux distributions only!
+    echo "This script is for Debian based Linux distributions only!"
     exit 1
 fi
 
 # check if root
 if [ $(id -u) -ne 0 ]; then 
-    echo Run me as root!
-    exit 1
-fi
-
-# check internet connection
-wget -q --spider http://google.com
-if [ $? -ne 0 ]; then
-    echo You are offline!
+    echo "Run me as root!"
     exit 1
 fi
 
@@ -25,6 +21,12 @@ fi
 ! [ `command -v wget` ] && \
     apt install wget -y
 
+# check internet connection
+wget -q --spider http://google.com
+if [ $? -ne 0 ]; then
+    echo "You are offline!"
+    exit 1
+fi
 
 # install alien if not installed
 ! [ `command -v alien` ] && \
@@ -34,9 +36,6 @@ fi
 # remove zenmap if already installed ( just in case to avoid any extra errors )
 [ `command -v zenmap` ] &&  \
     apt remove zenmap -y
-
-# exit on any error
-set -e
 
 # download zenmap
 wget https://nmap.org/dist/zenmap-7.92-1.noarch.rpm
