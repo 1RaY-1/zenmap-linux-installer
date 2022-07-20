@@ -1,7 +1,7 @@
 # About
 [Zenmap](https://nmap.org/zenmap/) installer for **Debian** based Linux distros.
 
-This script also installs some python libraries to avoid any extra errors.
+This script installs latest Zenmap version (7.92) and also installs some python libraries to avoid any extra errors.
 
 # Installation
 Copy and paste the following command in your terminal to install zenmap.
