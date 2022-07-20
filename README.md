@@ -1,13 +1,15 @@
 # About
-Simple bash script to install [Zenmap](https://nmap.org/zenmap/) on **Debian** based Linux distros.
+[Zenmap](https://nmap.org/zenmap/) installer for **Debian** based Linux distros.
 
-This script also installs some python libraries to prevent some errors at running zenmap.
+This script also installs some python libraries to avoid any extra errors.
 
 # Installation
-Copy and paste the following command to download and run this script (to install zenmap).
+Copy and paste the following command in your terminal to install zenmap.
 ```
 wget https://raw.githubusercontent.com/1RaY-1/zenmap-linux-installer/main/install-zenmap.sh && sudo bash install-zenmap.sh
 ```
 
-# Notice one thing
-This script supports only AMD64 and X86_64.
+# Requirements
+* Stable internet connection
+* AMD64 or X86_64
+* Python3
