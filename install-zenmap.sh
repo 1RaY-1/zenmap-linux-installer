@@ -19,7 +19,7 @@ fi
 
 # install wget if not installed
 ! [ `command -v wget` ] && \
-    apt install wget -y
+    apt update && apt install wget -y
 
 # check internet connection
 wget -q --spider http://google.com
@@ -30,10 +30,10 @@ fi
 
 # install alien if not installed
 ! [ `command -v alien` ] && \
-    apt install alien -y
+    apt update && apt install alien -y
  
 
-# remove zenmap if already installed ( just in case to avoid any extra errors )
+# just in case, but this probably won't happen
 [ `command -v zenmap` ] &&  \
     apt remove zenmap -y
 
