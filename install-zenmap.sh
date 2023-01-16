@@ -2,9 +2,6 @@
 
 # Simple bash script to install zenmap on Debian based Linux distros
 
-# exit on any error
-set -e
-
 # check if debian based linux distro
 if ! [ `command -v apt` ]; then 
     echo "This script is for Debian based Linux distributions only!"
@@ -62,5 +59,3 @@ rm -v zenmap_7.92-2_all.deb
 rm -v zenmap-7.92-1.noarch.rpm
 
 [ `command -v zenmap` ] && echo -e "\n\e[32mDone! \e[0m\nNow try running zenmap by typing: sudo zenmap"
-
-exit 0
