@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/1RaY-1/zenmap-linux-installer/main/instal
 ## Requirements
 * Stable internet connection
 * AMD64 or X86_64
-* Python3
+* Python2
 
 
 
