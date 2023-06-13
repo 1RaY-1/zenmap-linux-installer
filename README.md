@@ -5,3 +5,5 @@ Anyways you can now install zenmap (nmap with GUI) on Kali by running:
 ```
 sudo apt install zenmap-kbx
 ```
+
+If you are using other distro, you can get zenmap from the [official site](https://nmap.org/download)
