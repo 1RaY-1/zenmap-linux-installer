@@ -1,15 +1,7 @@
-# About
-How to install zenmap (nmap with GUI) on Kali/Debian based distros
+I found out that my script doesn't work anymore (due to package conflicts or due to other reasons), so decided to remove it.
 
-## Kali Linux
-You can install it with single command ```sudo apt install zenmap-kbx```
-
-## Other Debian based distros
-
-Install Zenmap 7.92 and needed dependencies using my script:
+Anyways you can now install zenmap (nmap with GUI) on Kali by running:
 
 ```
-wget https://raw.githubusercontent.com/1RaY-1/zenmap-linux-installer/main/install-zenmap.sh && sudo bash install-zenmap.sh
+sudo apt install zenmap-kbx
 ```
-
-**NOTE** Maybe my script doesn't work anymore (but before it did work), so wouldn't recommend using it, but you can improve it if you want to.
